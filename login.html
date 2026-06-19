@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Parking Slot Booking Platform</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#111827;
+        }
+
+        .container{
+            width:900px;
+            height:550px;
+            display:flex;
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .left{
+            width:55%;
+            background:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200");
+            background-size:cover;
+            background-position:center;
+            position:relative;
+        }
+
+        .overlay{
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        .overlay h1{
+            font-size:38px;
+            margin-bottom:15px;
+        }
+
+        .overlay p{
+            font-size:18px;
+        }
+
+        .right{
+            width:45%;
+            padding:50px;
+        }
+
+        .right h2{
+            text-align:center;
+            color:#111827;
+            margin-bottom:10px;
+        }
+
+        .right p{
+            text-align:center;
+            color:gray;
+            margin-bottom:25px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+        }
+
+        .password-box{
+            position:relative;
+        }
+
+        .eye{
+            position:absolute;
+            right:15px;
+            top:12px;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#111827;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#1f2937;
+        }
+
+        .register{
+            text-align:center;
+            margin-top:15px;
+        }
+
+        .register a{
+            color:#2563eb;
+            text-decoration:none;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <div class="overlay">
+            <h1>🚘 Smart Parking</h1>
+
+            <p>
+                Secure, Fast & Smart Parking
+                Management System
+            </p>
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <h2>Welcome Back</h2>
+
+        <p>Login to continue your parking journey</p>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter Email">
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password">
+
+            <span
+                class="eye"
+                onclick="togglePassword()">
+                👁
+            </span>
+
+        </div>
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <div class="register">
+            New User?
+            <a href="signup.html">
+                Create Account
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+<script>
+function togglePassword() {
+
+    const password =
+        document.getElementById("password");
+
+    if(password.type === "password"){
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>
+```

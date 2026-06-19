@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Parking Booking</title>
+
+    <style>
+        #slotGrid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+    margin:20px 0;
+}
+
+.slot{
+    padding:15px;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+
+.available{
+    background:green;
+}
+
+.booked{
+    background:red;
+}
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#0f172a,#1e3a8a);
+        }
+
+        .container{
+            width:500px;
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            color:#1e3a8a;
+            margin-bottom:10px;
+        }
+
+        h2{
+            color:#444;
+            margin-bottom:25px;
+        }
+
+        input,
+        select{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:17px;
+            cursor:pointer;
+            margin-top:10px;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        #qrCode{
+            margin-top:25px;
+        }
+
+        #qrCode img{
+            width:200px;
+            height:200px;
+            border:1px solid #ddd;
+            padding:10px;
+            border-radius:10px;
+        }
+
+        .icon{
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="icon">🚗</div>
+
+    <h1>Parking Slot Booking</h1>
+
+    <h2 id="welcome">
+        Welcome User
+    </h2>
+    <h3>Parking Slot Status</h3>
+
+<div id="slotGrid"></div>
+    <input
+        type="text"
+        id="userName"
+        placeholder="Enter Your Name">
+
+    <select id="slotNumber">
+        <option value="">Select Parking Slot</option>
+        <option value="1">Slot 1</option>
+        <option value="2">Slot 2</option>
+        <option value="3">Slot 3</option>
+        <option value="4">Slot 4</option>
+        <option value="5">Slot 5</option>
+        <option value="6">Slot 6</option>
+        <option value="7">Slot 7</option>
+        <option value="8">Slot 8</option>
+        <option value="9">Slot 9</option>
+        <option value="10">Slot 10</option>
+        <option value="11">Slot 11</option>
+        <option value="12">Slot 12</option>
+        <option value="13">Slot 13</option>
+        <option value="14">Slot 14</option>
+        <option value="15">Slot 15</option>
+        <option value="16">Slot 16</option>
+        <option value="17">Slot 17</option>
+        <option value="18">Slot 18</option>
+        <option value="19">Slot 19</option>
+        <option value="20">Slot 20</option>
+    </select>
+
+    <input
+        type="text"
+        id="vehicleNumber"
+        placeholder="Vehicle Number">
+
+    <button onclick="bookSlot()">
+        Book Slot
+    </button>
+
+    <div id="qrCode"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

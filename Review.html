@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Reviews</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#9333ea,#4f46e5);
+        }
+
+        .container{
+            width:500px;
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1{
+            color:#4f46e5;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#666;
+            margin-bottom:20px;
+        }
+
+        input,
+        select,
+        textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+            font-size:16px;
+        }
+
+        textarea{
+            height:120px;
+            resize:none;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#4f46e5;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:17px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#3730a3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⭐ Customer Review</h1>
+
+    <p>Share your parking experience with us</p>
+
+    <input
+        type="text"
+        id="userName"
+        placeholder="Enter Your Name">
+
+    <select id="rating">
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+        <option value="4">⭐⭐⭐⭐ Very Good</option>
+        <option value="3">⭐⭐⭐ Good</option>
+        <option value="2">⭐⭐ Fair</option>
+        <option value="1">⭐ Poor</option>
+    </select>
+
+    <textarea
+        id="comment"
+        placeholder="Write your review here..."></textarea>
+
+    <button onclick="submitReview()">
+        Submit Review
+    </button>
+
+</div>
+
+<script src="reviews.js"></script>
+
+</body>
+</html>
